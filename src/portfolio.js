@@ -298,14 +298,18 @@ const talkSection = {
 // Podcast Section
 
 const podcastSection = {
-  title: emoji("Podcast 🎙️"),
-  subtitle: "I LOVE TO TALK ABOUT MYSELF AND TECHNOLOGY",
-
+  title: emoji("Podcast: Overflow 🎙️"),
+  subtitle:
+    "I started overflow in 2021 as a self-help podcast to shed the light on psychological issues that we all face, but are too afraid to talk about, focusing mainly on my experience in a very competitive enviornment in high school and college.",
   // Please Provide with Your Podcast embeded Link
   podcast: [
-    "https://anchor.fm/codevcast/embed/episodes/DevStory---Saad-Pasta-from-Karachi--Pakistan-e9givv/a-a15itvo"
+    "https://podcasters.spotify.com/pod/show/overflow-podcast/embed/episodes/Overflow---Episode-10-Embracing-the-Unknown-Why-it-is-okay-to-feel-lost-e1bfpe1/a-a72g8gk"
   ],
-  display: false // Set false to hide this section, defaults to true
+  name: "Overflow",
+  links: {
+    youtube: "https://www.youtube.com/@overflowapodcast4070"
+  },
+  display: true // Set false to hide this section, defaults to true
 };
 
 const contactInfo = {
