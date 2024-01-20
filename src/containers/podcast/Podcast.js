@@ -3,7 +3,7 @@ import "./Podcast.scss";
 import {podcastSection} from "../../portfolio";
 import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
-
+import PodcastLinks from "../../components/podcastLinks/PodcastLinks";
 export default function Podcast() {
   const {isDark} = useContext(StyleContext);
 
@@ -48,6 +48,15 @@ export default function Podcast() {
             );
           })}
         </div>
+        {/* <Button
+          text="Youtube Channel"
+          onClick={() =>
+            openUrlInNewTab(podcastSection.url, podcastSection.name)
+          }
+        >
+          {podcastSection.name}
+        </Button> */}
+        <PodcastLinks />
       </div>
     </Fade>
   );
