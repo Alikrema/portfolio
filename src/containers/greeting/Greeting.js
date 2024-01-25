@@ -9,6 +9,8 @@ import Button from "../../components/button/Button";
 
 import {illustration, greeting} from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
+import TextSwitcher from "../../components/TextSwitch/TextSwitch";
+import PhotoGallery from "../../components/swipeable/Swipeable";
 
 export default function Greeting() {
   const {isDark} = useContext(StyleContext);
@@ -26,7 +28,6 @@ export default function Greeting() {
               >
                 {" "}
                 {greeting.title}{" "}
-                <span className="wave-emoji">{emoji("👋")}</span>
               </h1>
               <p
                 className={
@@ -50,7 +51,7 @@ export default function Greeting() {
               </div>
             </div>
           </div>
-          <div className="greeting-image-div">
+          {/* <div className="greeting-image-div">
             {illustration.animated ? (
               <DisplayLottie animationData={landingPerson} />
             ) : (
@@ -59,7 +60,8 @@ export default function Greeting() {
                 src={require("../../assets/images/manOnTable.svg")}
               ></img>
             )}
-          </div>
+          </div> */}
+          <PhotoGallery images={greeting.gallery} />
         </div>
       </div>
     </Fade>

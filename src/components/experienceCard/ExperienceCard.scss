@@ -17,6 +17,7 @@
 }
 
 .experience-card:hover {
+  transform: scale(1.05); /* Increase the size slightly */
   box-shadow: $lightBoxShadowDark 0px 20px 30px -10px;
 }
 

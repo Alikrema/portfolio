@@ -30,8 +30,16 @@ export default function ExperienceCard({cardInfo, isDark}) {
       : null;
   };
 
+  const handleClick = () => {
+    window.open(cardInfo.website, "_blank");
+  };
+
   return (
-    <div className={isDark ? "experience-card-dark" : "experience-card"}>
+    <div
+      className={isDark ? "experience-card-dark" : "experience-card"}
+      onClick={handleClick}
+      style={{cursor: "pointer"}}
+    >
       <div style={{background: rgb(colorArrays)}} className="experience-banner">
         <div className="experience-blurred_div"></div>
         <div className="experience-div-company">

@@ -21,11 +21,26 @@ const illustration = {
 
 const greeting = {
   username: "Ali Krema",
-  title: "Hi, It's Ali",
-  subTitle: emoji("I am Ali Krema 😶‍🌫️"),
+  title: "Ali Krema",
+  subTitle: emoji(
+    "Born and raised in Cairo, Egypt 🇪🇬. Studied Computer Science at the University of Pennsylvania 🔴🔵 🇺🇸. Software Engineer, Teacher at heart."
+  ),
   resumeLink:
-    "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing", // Set to empty to hide the button
-  displayGreeting: true // Set false to hide this section, defaults to true
+    "https://drive.google.com/file/d/1230D0bsqzSVwNL_KJYS2XLhIWvBknh-3/view?usp=sharing", // Set to empty to hide the button
+  displayGreeting: true, // Set false to hide this section, defaults to true
+  titles: [
+    "Software Engineer",
+    "Teacher",
+    "Language Learner",
+    "Podcaster",
+    "Mentor",
+    "FIFA Guru"
+  ],
+  //TODO: add more pictures
+  gallery: [
+    require("./assets/images/picture1.jpg")
+    // require("./assets/images/picture2.jpg")
+  ]
 };
 
 // Social Media Links
@@ -36,6 +51,7 @@ const socialMediaLinks = {
   gmail: "alikrema2.0@gmail.com",
   facebook: "https://www.facebook.com/alikrema27",
   medium: "https://medium.com/@alikrema",
+  twitter: "https://twitter.com/alikrrema",
   // Instagram, Twitter and Kaggle are also supported in the links!
   // To customize icons and social links, tweak src/components/SocialMedia
   display: true // Set true to display this section, defaults to false
@@ -45,8 +61,12 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "What I do",
-  subTitle: "Software engineer ",
-  skills: [emoji("just yk")],
+  subTitle: "Software Engineer ",
+  skills: [
+    emoji(
+      "I love to build stuff and teach others how to build stuff. Interested in CS Education, Software Engineering, CS+Ed AI tools."
+    )
+  ],
 
   /* Make Sure to include correct Font Awesome Classname to view your icon
 https://fontawesome.com/icons?d=gallery */
@@ -91,10 +111,10 @@ const educationInfo = {
   schools: [
     {
       schoolName: "University of Pennsylvania",
-      logo: require("./assets/images/pennLogo.png"),
-      subHeader: "Bachelors of Science in Engineering (BSE)",
-      duration: "September 2019 - May 2023"
-      // desc: "Participated in the research of XXX and published 3 papers.",
+      logo: require("./assets/images/penn_logo.png"),
+      subHeader: "Bachelors of Science in Engineering (BSE) - Computer Science",
+      duration: "September 2019 - May 2023",
+      desc: "Graduated Magna Cum Laude, GPA: 3.7"
       // descBullets: [
       //   "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
       //   "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
@@ -102,10 +122,10 @@ const educationInfo = {
     },
     {
       schoolName: "STEM October High School",
-      logo: require("./assets/images/STEM.png"),
+      logo: require("./assets/images/stem_logo.png"),
       subHeader: "High School Diploma",
-      duration: "September 2016 - May 2019"
-      // desc: "Ranked top 10% in the program. Took courses about Software Engineering, Web Security, Operating Systems, ...",
+      duration: "September 2016 - May 2019",
+      desc: emoji("This is where everything started. Forever grateful ❤️")
       // descBullets: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit"]
     }
   ]
@@ -138,29 +158,42 @@ const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
     {
-      role: "Backend Engineer",
+      role: "Software Engineer",
       company: "aydi",
       companylogo: require("./assets/images/aydiLogo.jpg"),
       date: "Jul 2023 – Present",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-      ]
+      desc: "Enhancing worker productivity and providing software solutions to optimize field processes. Transforming agri-tech in MENA region, and globally! 🚀",
+      descBullets: ["Backend Engineering + sprinkle of AI", "Coding a lot.."],
+      website: "https://www.aydi.com/"
     },
     {
-      role: "Course Instructor: CIS1950",
+      role: "Course Instructor: CIS1950 - Intro to Android Dev",
       company: "University of Pennsylvania",
-      companylogo: require("./assets/images/pennLogo.png"),
+      companylogo: require("./assets/images/penn_android_logo.png"),
       date: "Jan 2023 – May 2023",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      desc: "Had the time of my life teaching Android Development to an amazing cohort of 15 students at Penn. 🧑🏽‍💻💓",
+      descBullets: [
+        "Curriculum Design",
+        "Course Instruction",
+        "Grading",
+        "Office Hours",
+        "Fun!"
+      ],
+      website: "https://cis1950android.github.io/staff/"
     },
     {
-      role: "Teaching Assistant: CIS2400",
+      role: "Teaching Assistant: CIS2400 - Intro to Computer Systems",
       company: "University of Pennsylvania",
-      companylogo: require("./assets/images/pennLogo.png"),
+      companylogo: require("./assets/images/penn_logo.png"),
       date: "September 2020 – December 2022",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      desc: "Had the privilege of teaching 300+ students the fundamentals of Computer Systems. 💾👷🏽",
+      descBullets: [
+        "Recitation TA",
+        "Final Exam Reviews",
+        "Grading",
+        "Assembly, C, Circuit Design, much more!"
+      ],
+      website: "https://www.seas.upenn.edu/~cis2400/22fa/#course-staff"
     }
   ]
 };
@@ -179,29 +212,18 @@ const bigProjects = {
   title: "Big Projects",
   subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
   projects: [
-    {
-      image: require("./assets/images/saayaHealthLogo.webp"),
-      projectName: "Saayahealth",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      footerLink: [
-        {
-          name: "Visit Website",
-          url: "http://saayahealth.com/"
-        }
-        //  you can add extra buttons here.
-      ]
-    },
-    {
-      image: require("./assets/images/nextuLogo.webp"),
-      projectName: "Nextu",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      footerLink: [
-        {
-          name: "Visit Website",
-          url: "http://nextu.se/"
-        }
-      ]
-    }
+    // {
+    //   image: require("./assets/images/"),
+    //   projectName: "Saayahealth",
+    //   projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    //   footerLink: [
+    //     {
+    //       name: "Visit Website",
+    //       url: "http://saayahealth.com/"
+    //     }
+    //     //  you can add extra buttons here.
+    //   ]
+    // }
   ],
   display: false // Set false to hide this section, defaults to true
 };
@@ -273,7 +295,7 @@ const blogSection = {
         "React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies."
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Talks Sections
@@ -303,18 +325,28 @@ const podcastSection = {
     "I started overflow in 2021 as a self-help podcast to shed the light on psychological issues that we all face, but are too afraid to talk about, focusing mainly on my experience in a very competitive enviornment in high school and college.",
   // Please Provide with Your Podcast embeded Link
   podcast: [
-    "https://podcasters.spotify.com/pod/show/overflow-podcast/embed/episodes/Overflow---Episode-10-Embracing-the-Unknown-Why-it-is-okay-to-feel-lost-e1bfpe1/a-a72g8gk"
+    "https://open.spotify.com/embed/episode/1TKbaQm58SEGBGwLVWyJoX?utm_source=generator",
+    "https://open.spotify.com/embed/episode/1LGQTfMJChzzi8mfsIqCQW?utm_source=generator",
+    "https://open.spotify.com/embed/episode/0s4kb1sEn4abeTTWmzMFJc?utm_source=generator",
+    "https://open.spotify.com/embed/episode/5EAOmUoxBOsucAxwUoQAzU?utm_source=generator",
+    "https://open.spotify.com/embed/episode/5ce6GuYQ9T4axh2OMAtuYa?utm_source=generator",
+    "https://open.spotify.com/embed/episode/3PyMF7I11TOvaQL7M1c5mu?utm_source=generator"
   ],
   name: "Overflow",
   links: {
-    youtube: "https://www.youtube.com/@overflowapodcast4070"
+    youtube: "https://www.youtube.com/@overflowapodcast4070",
+    spotify:
+      "https://open.spotify.com/show/7iXbj2RTiHIEHSaz04OiMx?si=dfe1617832234c71",
+    google:
+      "https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy81NzFjN2RjOC9wb2RjYXN0L3Jzcw==",
+    apple: "https://podcasts.apple.com/au/podcast/overflow/id1563528922"
   },
   display: true // Set false to hide this section, defaults to true
 };
 
 const contactInfo = {
   title: emoji("Contact Me ☎️"),
-  subtitle: "Let's talk tech, non-tech. Let's just talk.",
+  subtitle: "Always happy to have a chat, tech or non-tech!",
   number: "+201125440583",
   email_address: "alikrema2.0@gmail.com"
 };
