@@ -20,6 +20,30 @@ export default function socialMedia() {
         </a>
       ) : null}
 
+      {socialMediaLinks.medium ? (
+        <a
+          href={socialMediaLinks.medium}
+          className="icon-button medium"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="fab fa-medium"></i>
+          <span></span>
+        </a>
+      ) : null}
+
+      {socialMediaLinks.twitter ? (
+        <a
+          href={socialMediaLinks.twitter}
+          className="icon-button twitter"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-brands fa-x-twitter"></i>
+          <span></span>
+        </a>
+      ) : null}
+
       {socialMediaLinks.linkedin ? (
         <a
           href={socialMediaLinks.linkedin}
@@ -28,18 +52,6 @@ export default function socialMedia() {
           rel="noopener noreferrer"
         >
           <i className="fab fa-linkedin-in"></i>
-          <span></span>
-        </a>
-      ) : null}
-
-      {socialMediaLinks.gmail ? (
-        <a
-          href={`mailto:${socialMediaLinks.gmail}`}
-          className="icon-button google"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i className="far fa-envelope"></i>
           <span></span>
         </a>
       ) : null}
@@ -63,7 +75,7 @@ export default function socialMedia() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <i className="fab fa-facebook-f"></i>
+          <i className="fab fa-facebook"></i>
           <span></span>
         </a>
       ) : null}
@@ -80,26 +92,14 @@ export default function socialMedia() {
         </a>
       ) : null}
 
-      {socialMediaLinks.twitter ? (
+      {socialMediaLinks.gmail ? (
         <a
-          href={socialMediaLinks.twitter}
-          className="icon-button twitter"
+          href={`mailto:${socialMediaLinks.gmail}`}
+          className="icon-button google"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <i className="fab fa-twitter"></i>
-          <span></span>
-        </a>
-      ) : null}
-
-      {socialMediaLinks.medium ? (
-        <a
-          href={socialMediaLinks.medium}
-          className="icon-button medium"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i className="fab fa-medium"></i>
+          <i className="fas fa-envelope"></i>
           <span></span>
         </a>
       ) : null}

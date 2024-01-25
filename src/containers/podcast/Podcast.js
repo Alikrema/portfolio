@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, {useContext, useState} from "react";
 import "./Podcast.scss";
 import {podcastSection} from "../../portfolio";
 import {Fade} from "react-reveal";
@@ -6,12 +6,20 @@ import StyleContext from "../../contexts/StyleContext";
 export default function Podcast() {
   const {isDark} = useContext(StyleContext);
 
-  if (!podcastSection)
+  const [loadErrors, setLoadErrors] = useState({});
+
+  if (!podcastSection) {
     console.error("podcastSection object for Podcast section is missing");
+    return null;
+  }
 
   if (!podcastSection.display) {
     return null;
   }
+
+  const handleLoadError = i => {
+    setLoadErrors({...loadErrors, [i]: true});
+  };
   return (
     <Fade bottom duration={1000} distance="20px">
       <div className="main">
@@ -33,19 +41,27 @@ export default function Podcast() {
               console.log(
                 `Podcast link for ${podcastSection.title} is missing`
               );
-              return null; // Return null to avoid rendering undefined elements
+              return null;
             }
+
+            if (loadErrors[i]) {
+              return (
+                <div className="error-message">
+                  Failed to load podcast. Please try again later.
+                </div>
+              );
+            }
+
             return (
               <div>
-                {" "}
-                {/* Encapsulate each podcast in a container */}
                 <iframe
                   className="podcast"
                   src={podcastLink}
                   frameBorder="0"
                   scrolling="no"
-                  title={`Podcast ${i}`} // Unique title for each podcast
+                  title={`Podcast ${i}`}
                   style={{width: "100%", height: "100px", margin: "10px 0px"}}
+                  onError={() => handleLoadError(i)}
                 ></iframe>
               </div>
             );

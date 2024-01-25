@@ -22,9 +22,11 @@ const illustration = {
 const greeting = {
   username: "Ali Krema",
   title: "Ali Krema",
-  subTitle: emoji(
-    "Born and raised in Cairo, Egypt 🇪🇬. Studied Computer Science at the University of Pennsylvania 🔴🔵 🇺🇸. Software Engineer, Teacher at heart."
-  ),
+  subTitle: [
+    emoji("Born and raised in Cairo, Egypt 🇪🇬."),
+    emoji("CS @ University of Pennsylvania 🔴🔵 🇺🇸."),
+    emoji("Software Engineer in practice 🧑🏽‍💻, Teacher at heart 👨🏽‍🏫")
+  ],
   resumeLink:
     "https://drive.google.com/file/d/1230D0bsqzSVwNL_KJYS2XLhIWvBknh-3/view?usp=sharing", // Set to empty to hide the button
   displayGreeting: true, // Set false to hide this section, defaults to true
@@ -52,6 +54,7 @@ const socialMediaLinks = {
   facebook: "https://www.facebook.com/alikrema27",
   medium: "https://medium.com/@alikrema",
   twitter: "https://twitter.com/alikrrema",
+  instagram: "https://www.instagram.com/alikrema1.0/",
   // Instagram, Twitter and Kaggle are also supported in the links!
   // To customize icons and social links, tweak src/components/SocialMedia
   display: true // Set true to display this section, defaults to false
@@ -61,10 +64,10 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "What I do",
-  subTitle: "Software Engineer ",
+  subTitle: "Software Engineer | Programming Instructor",
   skills: [
     emoji(
-      "I love to build stuff and teach others how to build stuff. Interested in CS Education, Software Engineering, CS+Ed AI tools."
+      "I love to build stuff and teach others how to build stuff. Interested in Software Development, CS Education, CS+Ed AI tools."
     )
   ],
 
@@ -73,32 +76,44 @@ https://fontawesome.com/icons?d=gallery */
 
   softwareSkills: [
     {
-      skillName: "JavaScript",
+      skillName: "JavaScript/TypeScript",
       fontAwesomeClassname: "fab fa-js"
     },
     {
-      skillName: "TypeScript",
-      fontAwesomeClassname: "fab fa-code"
+      skillName: "Python",
+      fontAwesomeClassname: "fab fa-python"
     },
     {
-      skillName: "nodejs",
+      skillName: "Redis",
+      fontAwesomeClassname: "fa fa-server"
+    },
+    {
+      skillName: "NodeJS",
       fontAwesomeClassname: "fab fa-node"
     },
     {
-      skillName: "nestjs"
-      // fontAwesomeClassname: "fab fa-7"
+      skillName: "NestJS",
+      fontAwesomeClassname: "fab fa-wolf-pack-battalion"
     },
     {
       skillName: "npm",
       fontAwesomeClassname: "fab fa-npm"
     },
     {
-      skillName: "Android Dev",
+      skillName: "Android Development",
       fontAwesomeClassname: "fab fa-android"
     },
     {
-      skillName: "sql-database",
+      skillName: "SQL/MariaDB",
       fontAwesomeClassname: "fas fa-database"
+    },
+    {
+      skillName: "GitHub",
+      fontAwesomeClassname: "fab fa-github"
+    },
+    {
+      skillName: "React/React-Native",
+      fontAwesomeClassname: "fab fa-react"
     }
   ],
   display: true // Set false to hide this section, defaults to true
@@ -209,23 +224,47 @@ const openSource = {
 // Some big projects you have worked on
 
 const bigProjects = {
-  title: "Big Projects",
-  subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
+  title: "Projects",
+  subtitle: "A glimpse of what I built recently",
   projects: [
-    // {
-    //   image: require("./assets/images/"),
-    //   projectName: "Saayahealth",
-    //   projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    //   footerLink: [
-    //     {
-    //       name: "Visit Website",
-    //       url: "http://saayahealth.com/"
-    //     }
-    //     //  you can add extra buttons here.
-    //   ]
-    // }
+    {
+      image: require("./assets/images/aydiLogo.jpg"),
+      projectName: "Saayahealth",
+      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      footerLink: [
+        {
+          name: "Visit Website",
+          url: "http://saayahealth.com/"
+        }
+        //  you can add extra buttons here.
+      ]
+    },
+    {
+      image: require("./assets/images/aydiLogo.jpg"),
+      projectName: "Saayahealth",
+      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      footerLink: [
+        {
+          name: "Visit Website",
+          url: "http://saayahealth.com/"
+        }
+        //  you can add extra buttons here.
+      ]
+    },
+    {
+      image: require("./assets/images/aydiLogo.jpg"),
+      projectName: "Saayahealth",
+      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      footerLink: [
+        {
+          name: "Visit Website",
+          url: "http://saayahealth.com/"
+        }
+        //  you can add extra buttons here.
+      ]
+    }
   ],
-  display: false // Set false to hide this section, defaults to true
+  display: true // Set false to hide this section, defaults to true
 };
 
 // Achievement Section
@@ -322,15 +361,11 @@ const talkSection = {
 const podcastSection = {
   title: emoji("Podcast: Overflow 🎙️"),
   subtitle:
-    "I started overflow in 2021 as a self-help podcast to shed the light on psychological issues that we all face, but are too afraid to talk about, focusing mainly on my experience in a very competitive enviornment in high school and college.",
+    "I started Overflow in 2021 as a self-help podcast to shed the light on psychological issues that we all face, but are too afraid to talk about, focusing mainly on my experience in a very competitive enviornment in high school and college. All content is in Arabic.",
   // Please Provide with Your Podcast embeded Link
   podcast: [
     "https://open.spotify.com/embed/episode/1TKbaQm58SEGBGwLVWyJoX?utm_source=generator",
-    "https://open.spotify.com/embed/episode/1LGQTfMJChzzi8mfsIqCQW?utm_source=generator",
-    "https://open.spotify.com/embed/episode/0s4kb1sEn4abeTTWmzMFJc?utm_source=generator",
-    "https://open.spotify.com/embed/episode/5EAOmUoxBOsucAxwUoQAzU?utm_source=generator",
-    "https://open.spotify.com/embed/episode/5ce6GuYQ9T4axh2OMAtuYa?utm_source=generator",
-    "https://open.spotify.com/embed/episode/3PyMF7I11TOvaQL7M1c5mu?utm_source=generator"
+    "https://open.spotify.com/embed/episode/1LGQTfMJChzzi8mfsIqCQW?utm_source=generator"
   ],
   name: "Overflow",
   links: {
@@ -345,9 +380,9 @@ const podcastSection = {
 };
 
 const contactInfo = {
-  title: emoji("Contact Me ☎️"),
+  title: emoji("Contact Me 🤙🏽"),
   subtitle: "Always happy to have a chat, tech or non-tech!",
-  number: "+201125440583",
+  // number: "+201125440583",
   email_address: "alikrema2.0@gmail.com"
 };
 
