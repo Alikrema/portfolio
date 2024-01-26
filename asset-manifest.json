@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/static/css/main.97010513.css",
+    "main.js": "/static/js/main.88a60c05.js",
+    "static/css/64.bba8fa55.chunk.css": "/static/css/64.bba8fa55.chunk.css",
+    "static/js/64.56dc6704.chunk.js": "/static/js/64.56dc6704.chunk.js",
+    "static/css/769.b3cbb36b.chunk.css": "/static/css/769.b3cbb36b.chunk.css",
+    "static/js/769.41ba6624.chunk.js": "/static/js/769.41ba6624.chunk.js",
+    "static/media/Montserrat-Regular.ttf": "/static/media/Montserrat-Regular.3cd786652b8a2e9d41f2.ttf",
+    "static/media/stem_logo.png": "/static/media/stem_logo.98222719885c4b10e6d4.png",
+    "static/media/picture1.jpg": "/static/media/picture1.788c2d15f3323c58f67b.jpg",
+    "static/media/Agustina.woff": "/static/media/Agustina.eb0c59dda4cc308cba96.woff",
+    "static/media/penn_android_logo.png": "/static/media/penn_android_logo.3835b969e1ba7cfbe665.png",
+    "static/media/penn_logo.png": "/static/media/penn_logo.4d7494b90154eda1d7a9.png",
+    "static/media/pennEngLogo.jpg": "/static/media/pennEngLogo.ba178c7c79e1d864dcfe.jpg",
+    "static/media/contactMailDark.svg": "/static/media/contactMailDark.1db650d351729a0f17b4e3104e6a7b7a.svg",
+    "static/media/developerActivity.svg": "/static/media/developerActivity.2c0445cae86f4243433a2f5a22b2c031.svg",
+    "static/media/skill.svg": "/static/media/skill.35a147662ab0a1d15e579690446e0258.svg",
+    "index.html": "/index.html",
+    "static/media/talksCardBack.svg": "/static/media/talksCardBack.73ed1545d58273ba64b0.svg",
+    "main.97010513.css.map": "/static/css/main.97010513.css.map",
+    "main.88a60c05.js.map": "/static/js/main.88a60c05.js.map",
+    "64.bba8fa55.chunk.css.map": "/static/css/64.bba8fa55.chunk.css.map",
+    "64.56dc6704.chunk.js.map": "/static/js/64.56dc6704.chunk.js.map",
+    "769.b3cbb36b.chunk.css.map": "/static/css/769.b3cbb36b.chunk.css.map",
+    "769.41ba6624.chunk.js.map": "/static/js/769.41ba6624.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.97010513.css",
+    "static/js/main.88a60c05.js"
+  ]
+}
