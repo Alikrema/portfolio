@@ -1,5 +1,6 @@
 import React, {useState, createRef} from "react";
 import "./ExperienceCard.scss";
+import "../achievementCard/AchievementCard.scss";
 import ColorThief from "colorthief";
 
 export default function ExperienceCard({cardInfo, isDark}) {
@@ -31,14 +32,13 @@ export default function ExperienceCard({cardInfo, isDark}) {
   };
 
   const handleClick = () => {
-    window.open(cardInfo.website, "_blank");
+    window.open(cardInfo.link.url, "_blank");
   };
 
   return (
     <div
       className={isDark ? "experience-card-dark" : "experience-card"}
       onClick={handleClick}
-      style={{cursor: "pointer"}}
     >
       <div style={{background: rgb(colorArrays)}} className="experience-banner">
         <div className="experience-blurred_div"></div>
@@ -86,6 +86,14 @@ export default function ExperienceCard({cardInfo, isDark}) {
         <ul>
           <GetDescBullets descBullets={cardInfo.descBullets} isDark={isDark} />
         </ul>
+      </div>
+      <div className="certificate-card-footer">
+        <span
+          className={isDark ? "dark-mode certificate-tag" : "certificate-tag"}
+          onClick={handleClick}
+        >
+          {cardInfo.link.name}
+        </span>
       </div>
     </div>
   );

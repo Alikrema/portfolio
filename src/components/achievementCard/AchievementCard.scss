@@ -11,6 +11,7 @@
   line-height: 24px;
   font-weight: 700;
   margin: 15px 0 0 0;
+  text-align: center;
 }
 .card-subtitle {
   color: $cardSubtitle;
@@ -28,7 +29,7 @@
   transition: all 0.3s ease;
 }
 .certificate-detail-div {
-  text-align: center;
+  text-align: start;
 }
 .certificate-card:hover {
   box-shadow: $lightBoxShadowDark 0px 20px 30px -10px;

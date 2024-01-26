@@ -23,8 +23,8 @@ const greeting = {
   username: "Ali Krema",
   title: "Ali Krema",
   subTitle: [
-    emoji("Born and raised in Cairo, Egypt 🇪🇬."),
-    emoji("CS @ University of Pennsylvania 🔴🔵 🇺🇸."),
+    emoji("Born and raised in Cairo, Egypt 🇪🇬"),
+    emoji("CS @ University of Pennsylvania 🔴🔵 🇺🇸"),
     emoji("Software Engineer in practice 🧑🏽‍💻, Teacher at heart 👨🏽‍🏫")
   ],
   resumeLink:
@@ -104,6 +104,10 @@ https://fontawesome.com/icons?d=gallery */
       fontAwesomeClassname: "fab fa-android"
     },
     {
+      skillName: "Linux",
+      fontAwesomeClassname: "fab fa-linux"
+    },
+    {
       skillName: "SQL/MariaDB",
       fontAwesomeClassname: "fas fa-database"
     },
@@ -174,41 +178,52 @@ const workExperiences = {
   experience: [
     {
       role: "Software Engineer",
-      company: "aydi",
+      company: "Aydi",
       companylogo: require("./assets/images/aydiLogo.jpg"),
-      date: "Jul 2023 – Present",
+      date: "Jul 2023 – Present (Cairo, Egypt)",
       desc: "Enhancing worker productivity and providing software solutions to optimize field processes. Transforming agri-tech in MENA region, and globally! 🚀",
-      descBullets: ["Backend Engineering + sprinkle of AI", "Coding a lot.."],
-      website: "https://www.aydi.com/"
+      descBullets: [
+        "Backend Engineering + sprinkle of AI",
+        "Casually transforming how agriculture works"
+      ],
+      link: {
+        name: "Company Website",
+        url: "https://www.aydi.com/"
+      }
     },
     {
-      role: "Course Instructor: CIS1950 - Intro to Android Dev",
-      company: "University of Pennsylvania",
+      role: "Course Instructor",
+      company: "CIS1950: Intro to Android",
       companylogo: require("./assets/images/penn_android_logo.png"),
-      date: "Jan 2023 – May 2023",
-      desc: "Had the time of my life teaching Android Development to an amazing cohort of 15 students at Penn. 🧑🏽‍💻💓",
+      date: "Jan 2023 – May 2023 (Philadelphia, PA)",
+      desc: "Had the time of my life teaching an intro to Android class to an amazing cohort of 15 undergradautes at Penn. 🧑🏽‍💻💓",
       descBullets: [
         "Curriculum Design",
         "Course Instruction",
         "Grading",
-        "Office Hours",
-        "Fun!"
+        "Office Hours"
       ],
-      website: "https://cis1950android.github.io/staff/"
+      link: {
+        name: "Course Website",
+        url: "https://cis1950android.github.io/staff/"
+      }
     },
     {
-      role: "Teaching Assistant: CIS2400 - Intro to Computer Systems",
-      company: "University of Pennsylvania",
+      role: "Teaching Assistant",
+      company: "CIS2400: Intro to Comp Sys.",
       companylogo: require("./assets/images/penn_logo.png"),
-      date: "September 2020 – December 2022",
+      date: "Sep 2020 – Dec 2022 (Philadelphia, PA)",
       desc: "Had the privilege of teaching 300+ students the fundamentals of Computer Systems. 💾👷🏽",
       descBullets: [
-        "Recitation TA",
+        "Assembly, C, Circuit Design",
+        "Teaching sections of 25 students",
         "Final Exam Reviews",
-        "Grading",
-        "Assembly, C, Circuit Design, much more!"
+        "Grading"
       ],
-      website: "https://www.seas.upenn.edu/~cis2400/22fa/#course-staff"
+      link: {
+        name: "Course Website",
+        url: "https://www.seas.upenn.edu/~cis2400/22fa/#course-staff"
+      }
     }
   ]
 };
@@ -264,7 +279,7 @@ const bigProjects = {
       ]
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Achievement Section
@@ -289,9 +304,9 @@ const achievementSection = {
       ]
     },
     {
-      title: "Max Mintz Undergraduate TA Hall of Famer",
+      title: "Max Mintz TA Hall of Famer",
       subtitle:
-        "The award exemplifies the TA's ability to go above and beyond in their role as well as having a profound impact on the students they work with.",
+        "This award exemplifies the TA's ability to go above and beyond in their role as well as having a profound impact on the students they work with.",
       image: require("./assets/images/pennEngLogo.jpg"),
       imageAlt: "Penn Engineering Logo",
       footerLink: [
@@ -303,12 +318,17 @@ const achievementSection = {
     },
 
     {
-      title: "CIS Faculty Appreciation Award Winner",
+      title: "CIS Faculty Appreciation Award",
       subtitle:
-        "The Faculty Appreciation Award is a special award given by the faculty of the School of Engineering and Applied Science to recognize and honor outstanding students for their service to the University.",
+        "This is a special award given by the faculty of the School of Engineering and Applied Science to recognize and honor outstanding students for their service to the University.",
       image: require("./assets/images/pennEngLogo.jpg"),
       imageAlt: "Penn Engineering Logo",
-      footerLink: []
+      footerLink: [
+        {
+          name: "View Award",
+          url: "https://www.cis.upenn.edu/news/awards/"
+        }
+      ]
     }
   ],
   display: true // Set false to hide this section, defaults to true

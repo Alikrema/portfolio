@@ -6,6 +6,7 @@
   box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
   border-radius: 10px;
   border: 1px solid $lightBorder1;
+  padding-bottom: 1.5rem;
 }
 
 .experience-card-dark {
@@ -17,7 +18,6 @@
 }
 
 .experience-card:hover {
-  transform: scale(1.05); /* Increase the size slightly */
   box-shadow: $lightBoxShadowDark 0px 20px 30px -10px;
 }
 
