@@ -1,6 +1,6 @@
 {
-  "short_name": "DeveloperFolio",
-  "name": "DeveloperFolio",
+  "short_name": "Ali Krema",
+  "name": "Ali Krema",
   "icons": [
     {
       "src": "/favicon.ico",
@@ -11,11 +11,6 @@
       "src": "/android-chrome-192x192.png?v8=qAJ44G5Bm7",
       "type": "image/png",
       "sizes": "192x192"
-    },
-    {
-      "src": "/android-chrome-384x384.png?v8=qAJ44G5Bm7",
-      "type": "image/png",
-      "sizes": "384x384"
     }
   ],
   "start_url": ".",
