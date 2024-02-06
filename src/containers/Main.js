@@ -20,6 +20,7 @@ import {splashScreen} from "../portfolio";
 import {StyleProvider} from "../contexts/StyleContext";
 import {useLocalStorage} from "../hooks/useLocalStorage";
 import "./Main.scss";
+import ValentinesInvite from "./valentinesInvite/valentinesInvite";
 
 const Main = () => {
   const darkPref = window.matchMedia("(prefers-color-scheme: dark)");
@@ -50,7 +51,7 @@ const Main = () => {
           <SplashScreen />
         ) : (
           <>
-            <Header />
+            {/* <Header />
             <Greeting />
             <Education />
             <Skills />
@@ -65,7 +66,8 @@ const Main = () => {
             <Twitter />
             <Profile />
             <Footer />
-            <ScrollToTopButton />
+            <ScrollToTopButton /> */}
+            <ValentinesInvite />
           </>
         )}
       </StyleProvider>
