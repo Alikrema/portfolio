@@ -20,7 +20,6 @@ import {splashScreen} from "../portfolio";
 import {StyleProvider} from "../contexts/StyleContext";
 import {useLocalStorage} from "../hooks/useLocalStorage";
 import "./Main.scss";
-import ValentinesInvite from "./valentinesInvite/valentinesInvite";
 
 const Main = () => {
   const darkPref = window.matchMedia("(prefers-color-scheme: dark)");
@@ -45,10 +44,6 @@ const Main = () => {
     setIsDark(!isDark);
   };
 
-  const increment = () => {
-    setCounter(counter + 1);
-  };
-
   return (
     <div className={isDark ? "dark-mode" : null}>
       <StyleProvider value={{isDark: isDark, changeTheme: changeTheme}}>
@@ -56,29 +51,22 @@ const Main = () => {
           <SplashScreen />
         ) : (
           <>
-            {counter !== 18 && (
-              <>
-                <Header />
-                <Greeting />
-                <Education />
-                <Skills />
-                <StackProgress />
-                <WorkExperience />
-                <Projects />
-                <StartupProject />
-                <Achievement />
-                <Blogs />
-                <Talks />
-                <Podcast />
-                {/* <Twitter /> */}
-                <Profile />
-                <Footer />
-              </>
-            )}
-            <div onClick={increment}>
-              <ScrollToTopButton />
-            </div>
-            {counter === 18 && <ValentinesInvite />}
+            <Header />
+            <Greeting />
+            <Education />
+            <Skills />
+            <StackProgress />
+            <WorkExperience />
+            <Projects />
+            <StartupProject />
+            <Achievement />
+            <Blogs />
+            <Talks />
+            <Podcast />
+            <Twitter />
+            <Profile />
+            <Footer />
+            <ScrollToTopButton />
           </>
         )}
       </StyleProvider>
