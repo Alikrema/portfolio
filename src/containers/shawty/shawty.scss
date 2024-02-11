@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+$valentine-pink: #f1e1e4;
+$valentine-red: #FF0000;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.love-letter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px;
+    padding: 20px;
+    padding-left: 200px;
+    padding-right: 200px;
+    border: 2px solid $valentine-red; // Hot pink border
+    border-radius: 8px;
+    background-color: #FFF0F5; // Lavender blush background
+  
+    .letter-content {
+      margin-bottom: 20px;
+      font-family: 'Roboto', sans-serif; // Roboto font
+  
+      .date {
+        font-size: 16px;
+        font-weight: bold;
+        color:$valentine-red; // Crimson color
+        margin-bottom: 10px;
+      }
+  
+      p {
+        font-size: 14px;
+        color: #8b002e; // Dark magenta color
+        text-align: justify;
+      }
+    }
+  
+    .new-letter-btn {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      background-color: $valentine-red; // Hot pink button
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  
+      &:hover {
+        background-color: #94001e; // Crimson hover color
+      }
+    }
+}
+.text-container {
+  text-align: center;
+}
+h2 {
+  font-size: 2em;
+  margin-bottom: 2em;
+  margin-top: 3em;
+  font-family: 'Pacifico', cursive;
+  color: $valentine-red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.iframe-wrapper {
+  position: relative;
+  width: 240px;
+  height: 126px;
+  margin-bottom: 50px;
+}
+
+.iframe-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

@@ -25,6 +25,7 @@ import ValentinesInvite from "./valentinesInvite/valentinesInvite";
 const Main = () => {
   const darkPref = window.matchMedia("(prefers-color-scheme: dark)");
   const [isDark, setIsDark] = useLocalStorage("isDark", false);
+  const [counter, setCounter] = useState(0);
   const [isShowingSplashAnimation, setIsShowingSplashAnimation] =
     useState(true);
 
@@ -44,6 +45,10 @@ const Main = () => {
     setIsDark(!isDark);
   };
 
+  const increment = () => {
+    setCounter(counter + 1);
+  };
+
   return (
     <div className={isDark ? "dark-mode" : null}>
       <StyleProvider value={{isDark: isDark, changeTheme: changeTheme}}>
@@ -51,23 +56,29 @@ const Main = () => {
           <SplashScreen />
         ) : (
           <>
-            {/* <Header />
-            <Greeting />
-            <Education />
-            <Skills />
-            <StackProgress />
-            <WorkExperience />
-            <Projects />
-            <StartupProject />
-            <Achievement />
-            <Blogs />
-            <Talks />
-            <Podcast />
-            <Twitter />
-            <Profile />
-            <Footer />
-            <ScrollToTopButton /> */}
-            <ValentinesInvite />
+            {counter !== 18 && (
+              <>
+                <Header />
+                <Greeting />
+                <Education />
+                <Skills />
+                <StackProgress />
+                <WorkExperience />
+                <Projects />
+                <StartupProject />
+                <Achievement />
+                <Blogs />
+                <Talks />
+                <Podcast />
+                {/* <Twitter /> */}
+                <Profile />
+                <Footer />
+              </>
+            )}
+            <div onClick={increment}>
+              <ScrollToTopButton />
+            </div>
+            {counter === 18 && <ValentinesInvite />}
           </>
         )}
       </StyleProvider>

@@ -20,6 +20,7 @@
     "react-swipeable-views": "^0.14.0",
     "react-swipeable-views-utils": "^0.14.0",
     "react-test-renderer": "^16.10.2",
+    "react-toastify": "^5.5.0",
     "react-twitter-embed": "3.0.3",
     "sass": "^1.32.8",
     "styled-components": "^6.1.8"
